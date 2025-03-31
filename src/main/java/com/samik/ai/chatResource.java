@@ -16,6 +16,7 @@ public class chatResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.TEXT_PLAIN)
     public String chatter(String body){
-        return ai.chat(body);
+        String resp = ai.chat(1,body);
+        return resp;
     }
 }
